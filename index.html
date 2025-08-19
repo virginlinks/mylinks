@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Where to next?</title>
+  <meta name="description" content="Pick your poison. Full content inside.">
+  <meta property="og:title" content="Where to next?">
+  <meta property="og:description" content="Pick your poison. Full content inside.">
+  <meta property="og:image" content="hero.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      display: block;
+    }
+    main {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      color: #ccc;
+      margin: 0.5rem 0 2rem;
+    }
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #e60073;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff3385;
+    }
+    .btn.secondary {
+      background-color: #0066cc;
+    }
+    .btn.secondary:hover {
+      background-color: #3399ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="hero.jpg" alt="Hero image">
+  </header>
+  <main>
+    <h1>Where to next?</h1>
+    <p>Pick your poison. Full content inside.</p>
+    <a id="onlyfans" class="btn" href="#">Go to OnlyFans</a>
+    <a id="fansly" class="btn secondary" href="#">Go to Fansly</a>
+  </main>
+  <script>
+    function getParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return ['src','utm_source','utm_medium','utm_campaign','utm_term','utm_content','ad','profile']
+        .map(p => urlParams.get(p) ? `${p}=${encodeURIComponent(urlParams.get(p))}` : '')
+        .filter(Boolean)
+        .join('&');
+    }
+    function uniqueTid() {
+      return 'tid=' + Date.now() + Math.floor(Math.random()*100000);
+    }
+    const baseOnlyfans = "https://onlyfans.com/lilyuliaxo/trial/ybtqfk6xke5ha3wbhgbg05zafw7l62hg";
+    const baseFansly = "https://fans.ly/littleyulia/t3";
+    const params = getParams();
+    document.getElementById("onlyfans").href = baseOnlyfans + (params ? "?" + params + "&" + uniqueTid() : "?" + uniqueTid());
+    document.getElementById("fansly").href = baseFansly + (params ? "?" + params + "&" + uniqueTid() : "?" + uniqueTid());
+  </script>
+</body>
+</html>
