@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diana — Where to next?</title>
+  <meta name="description" content="Pick your poison. Full content inside. Go to Diana’s OnlyFans or Fansly." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {{
+      --bg: #0c0c10;
+      --card: #15151b;
+      --text: #ffffff;
+      --muted: #b8b8c2;
+      --accent: #ff2b6a;
+      --accent-hover: #e1265f;
+      --radius: 18px;
+    }}
+    * {{ box-sizing: border-box; }}
+    html, body {{
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height: 100%;
+    }}
+    .wrap {{
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }}
+    .card {{
+      width: min(460px, 100%);
+      background: linear-gradient(180deg, #17171d 0%, #121217 100%);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+      border: 1px solid rgba(255,255,255,.06);
+    }}
+    .hero-wrap {{
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background:#0b0b0d;
+    }}
+    .hero {{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      filter: contrast(1.02) saturate(1.03);
+      transform: translateZ(0);
+    }}
+    .content {{
+      padding: 22px 20px 20px;
+      text-align: center;
+    }}
+    h1 {{
+      font-size: 28px;
+      margin: 6px 0 6px;
+      letter-spacing: .2px;
+    }}
+    .sub {{
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 15px;
+      line-height: 1.45;
+    }}
+    .btns {{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 0;
+    }}
+    .btn {{
+      position: relative;
+      display:block;
+      width:100%;
+      border:0;
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-weight: 800;
+      font-size:17px;
+      text-decoration:none;
+      color:#fff;
+      background:
+        radial-gradient(120% 120% at 50% -20%, rgba(255,255,255,.08), transparent 45%),
+        linear-gradient(180deg, #ff2b6a, #b8003e);
+      cursor:pointer;
+      transition: transform .06s ease, filter .2s ease, box-shadow .2s ease;
+      box-shadow: 0 8px 22px rgba(255, 43, 106, .25);
+    }}
+    .btn:hover {{ filter: brightness(1.05); }}
+    .btn:active {{ transform: translateY(1px); }}
+    .btn:focus-visible {{ outline: 3px solid #ffffff; outline-offset: 3px; }}
+    .btn.secondary {{
+      background:
+        radial-gradient(120% 120% at 50% -20%, rgba(255,255,255,.08), transparent 45%),
+        linear-gradient(180deg, #6f77ff, #3a42d9);
+      box-shadow: 0 8px 22px rgba(73, 82, 255, .25);
+    }}
+    .foot {{
+      margin-top:14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }}
+    @media (min-width: 520px) {{
+      .btns {{ gap: 14px; }}
+      .btn {{ font-size:18px; padding:17px 20px; }}
+    }}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article class="card" role="region" aria-label="Destination chooser">
+      <div class="hero-wrap">
+        <img class="hero" src="hero.jpg" alt="Diana seated, glasses and white shirt, preview image" />
+      </div>
+      <div class="content">
+        <h1>Where to next?</h1>
+        <p class="sub">Pick your poison. Full content inside.</p>
+        <div class="btns">
+          <a id="btn-onlyfans" class="btn" href="#" role="button" aria-label="Go to OnlyFans">Go to OnlyFans</a>
+          <a id="btn-fansly" class="btn secondary" href="#" role="button" aria-label="Go to Fansly">Go to Fansly</a>
+        </div>
+        <p class="foot" aria-hidden="true">Tracking params are auto-forwarded.</p>
+      </div>
+    </article>
+  </main>
+  <script>
+    const DEST_ONLYFANS = "https://onlyfans.com/diana-228/trial/rogleh1l0l1jifh9qs3m6i8lujegxh9x";
+    const DEST_FANSLY   = "https://fans.ly/valentinakusto/t1";
+
+    const ALLOWED_KEYS = new Set([
+      "src","utm_source","utm_medium","utm_campaign","utm_term","utm_content","ad","profile"
+    ]);
+
+    const srcParams = new URLSearchParams(window.location.search);
+    const fwd = new URLSearchParams();
+    for (const [k,v] of srcParams.entries()) {{ if (ALLOWED_KEYS.has(k) && v !== "") fwd.append(k, v); }}
+
+    function uniqueTid() {{ return "tid=" + (Date.now().toString(36) + Math.random().toString(36).slice(2,8)); }}
+
+    function buildOutUrl(base) {{
+      const hasQ = base.includes("?");
+      const u = base + (hasQ ? "&" : "?") + uniqueTid();
+      const extra = fwd.toString();
+      return extra ? u + "&" + extra : u;
+    }}
+
+    document.getElementById("btn-onlyfans").addEventListener("click", function(e){{ e.preventDefault(); window.location.href = buildOutUrl(DEST_ONLYFANS); }});
+    document.getElementById("btn-fansly").addEventListener("click", function(e){{ e.preventDefault(); window.location.href = buildOutUrl(DEST_FANSLY); }});
+  </script>
+</body>
+</html>
