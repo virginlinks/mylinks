@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana Links</title>
+  <meta name="description" content="Where to next? Pick your poison. Full content inside.">
+  <meta property="og:image" content="hero.mp4">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      overflow: hidden;
+    }
+    video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background: #e91e63;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #c2185b;
+    }
+  </style>
+  <script>
+    function getParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let params = "";
+      ["src","utm_source","utm_medium","utm_campaign","utm_term","utm_content","ad","profile"].forEach(key => {
+        if (urlParams.get(key)) {
+          params += (params ? "&" : "?") + key + "=" + encodeURIComponent(urlParams.get(key));
+        }
+      });
+      return params;
+    }
+    function addTidAndGo(baseUrl) {
+      const tid = "tid=" + Date.now() + Math.floor(Math.random()*1000);
+      const params = getParams();
+      const sep = params ? "&" : "?";
+      window.location.href = baseUrl + params + sep + tid;
+    }
+  </script>
+</head>
+<body>
+  <video autoplay muted loop playsinline>
+    <source src="hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <h1>Where to next?</h1>
+    <p>Pick your poison. Full content inside.</p>
+    <div class="buttons">
+      <a href="#" onclick="addTidAndGo('https://onlyfans.com/diana-228/trial/euwaoxvt5a1zas6cs2lwkwamgmerqm9p')">Go to OnlyFans</a>
+      <a href="#" onclick="addTidAndGo('https://fans.ly/valentinakusto/t2')">Go to Fansly</a>
+    </div>
+  </div>
+</body>
+</html>
