@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanna see me squirt?</title>
+  <meta name="description" content="You’ve only seen a little… but this is just the tip of the iceberg. Inside: full nude, hardcore squirting videos, and custom clips made just for you." />
+  <meta property="og:title" content="Wanna see me squirt?" />
+  <meta property="og:description" content="Full NUDE, hardcore squirting videos, and custom clips made just for YOU." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.jpg" />
+  <style>
+    :root{
+      --bg:#0b0b0f; --card:#14141a; --text:#f5f7fb; --muted:#b8bdd1;
+      --ring:rgba(255,255,255,.12);
+      --pink1:#ff4d8d; --pink2:#e92f77;
+      --blue1:#60a5fa; --blue2:#3b82f6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(60% 60% at 50% 0%, #17171f 0%, #0b0b0f 60%);
+      color:var(--text);
+      font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue","Noto Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .card{
+      width:min(780px,100%); background:var(--card);
+      border:1px solid var(--ring); border-radius:24px; overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+    .hero{position:relative; width:100%; aspect-ratio:16/9; background:#000; overflow:hidden;}
+    .hero img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05);}
+    .overlay{position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);}
+    .content{padding:28px 22px 8px}
+    h1{margin:0 0 12px; font-size:34px; letter-spacing:.3px;}
+    .blurb{margin:0 0 22px; color:var(--muted)}
+    .blurb ul{margin:10px 0 0 0; padding-left:1.1em}
+    .btns{display:grid; gap:12px}
+    a.btn{
+      display:flex; align-items:center; justify-content:center; text-decoration:none; color:#fff;
+      font-weight:800; letter-spacing:.2px; border-radius:14px; border:1px solid var(--ring);
+      padding:16px 18px; transition:transform .06s ease, box-shadow .06s ease;
+      box-shadow:0 6px 18px rgba(0,0,0,.35); text-align:center; word-break:break-word;
+    }
+    a.btn:focus{box-shadow:0 0 0 4px rgba(255,255,255,.08);}
+    a.btn:hover{transform:translateY(-1px)}
+    a.primary{background:linear-gradient(180deg, var(--pink1), var(--pink2)); font-size:18px; padding:18px 20px;}
+    .row{display:grid; grid-template-columns:1fr; gap:12px}
+    a.btn.fansly, a.btn.buduar{background:linear-gradient(180deg, var(--blue1), var(--blue2));}
+    footer{padding:10px 22px 22px; color:var(--muted); font-size:12px; text-align:center;}
+    .logo{font-weight:700; color:#fff; opacity:.9;}
+    @media (min-width:560px){
+      .content{padding:32px 28px 10px}
+      h1{font-size:38px}
+      .row{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="hero">
+      <img src="hero.jpg" alt="Cover photo" />
+      <div class="overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="content">
+      <h1>Wanna see me squirt?</h1>
+
+      <div class="blurb" aria-describedby="list">
+        You’ve only seen a little… but this is just the tip of the iceberg<br/>
+        Inside you’ll find so much more:
+        <ul id="list">
+          <li>Full NUDE 🎥</li>
+          <li>Hardcore squirting videos 💦</li>
+          <li>Custom clips made just for YOU 😏</li>
+        </ul>
+      </div>
+
+      <div class="btns" role="navigation" aria-label="Primary links">
+        <a id="btn-onlyfans" class="btn primary" href="#" rel="nofollow">Go to OnlyFans</a>
+        <div class="row">
+          <a id="btn-fansly" class="btn fansly" href="#" rel="nofollow">Go to Fansly</a>
+          <a id="btn-buduar" class="btn buduar" href="#" rel="nofollow">Go to Buduar</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span class="logo">virginlinks</span> · © <span id="y"></span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const LINKS = {
+        of: "https://onlyfans.com/aleksa_vamp/trial/epi6zgo1oqlfi689mhjoukahzytltzrk",
+        fl: "https://fans.ly/AleksaVamp/t18",
+        bd: "https://buduar.com/"
+      };
+      const allowed = ["src","utm_source","utm_medium","utm_campaign","utm_term","utm_content","ad","profile"];
+      const inParams = new URLSearchParams(window.location.search);
+      const pass = new URLSearchParams();
+      for (const k of allowed) if (inParams.has(k)) pass.set(k, inParams.get(k));
+      const tid = () => Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,8);
+      const withParams = (u)=>{
+        const url = new URL(u);
+        for (const [k,v] of pass.entries()) url.searchParams.set(k,v);
+        url.searchParams.set("tid", tid());
+        return url.toString();
+      };
+      const map = {
+        "btn-onlyfans": LINKS.of,
+        "btn-fansly": LINKS.fl,
+        "btn-buduar": LINKS.bd
+      };
+      for (const id in map) {
+        const el = document.getElementById(id);
+        if (el) el.setAttribute("href", withParams(map[id]));
+      }
+      document.getElementById("y").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
