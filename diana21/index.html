@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diana — Where to next?</title>
+  <meta name="description" content="Pick your poison. Full content inside. Go to Diana’s OnlyFans or Fansly." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#12131a;
+      --muted:#aeb0bb;
+      --txt:#ffffff;
+      --pink1:#ff2b6a;
+      --pink2:#b8003e;
+      --blue1:#6f77ff;
+      --blue2:#3a42d9;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      background:var(--bg);
+      color:var(--txt);
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height:100%;
+    }
+    .wrap{
+      min-height:100dvh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .card{
+      width:min(520px,100%);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 24px 80px rgba(0,0,0,.6);
+    }
+    .hero{
+      position:relative;
+      aspect-ratio: 16/10;
+      background:#0a0a0f;
+      overflow:hidden;
+    }
+    .hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%);
+      pointer-events:none;
+    }
+    .content{
+      padding:22px 20px 24px;
+      text-align:center;
+    }
+    h1{
+      font-size:28px; margin:6px 0 6px;
+    }
+    .sub{
+      color:var(--muted);
+      margin:0 0 20px;
+      font-size:15px; line-height:1.5;
+    }
+    .btns{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    @media (min-width:520px){
+      .btns{ grid-template-columns:1fr 1fr; gap:14px; }
+    }
+    .btn{
+      display:inline-flex; justify-content:center; align-items:center;
+      padding:16px 18px;
+      width:100%;
+      border-radius:14px;
+      font-weight:800;
+      font-size:17px;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(180deg, var(--pink1), var(--pink2));
+      box-shadow:0 10px 26px rgba(255,43,106,.28);
+      transition:transform .06s ease, filter .2s ease, box-shadow .2s ease;
+    }
+    .btn.secondary{
+      background:linear-gradient(180deg, var(--blue1), var(--blue2));
+      box-shadow:0 10px 26px rgba(73,82,255,.28);
+    }
+    .btn:hover{ filter:brightness(1.05); }
+    .btn:active{ transform:translateY(1px); }
+    .foot{
+      margin-top:14px; color:var(--muted); font-size:12px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article class="card">
+      <div class="hero">
+        <img src="hero.jpg" alt="Diana preview" />
+      </div>
+      <div class="content">
+        <h1>Where to next?</h1>
+        <p class="sub">Pick your poison. Full content inside.</p>
+        <div class="btns">
+          <a id="btn-onlyfans" class="btn" href="#">Go to OnlyFans</a>
+          <a id="btn-fansly" class="btn secondary" href="#">Go to Fansly</a>
+        </div>
+        <p class="foot">Tracking params are auto-forwarded.</p>
+      </div>
+    </article>
+  </main>
+  <script>
+    const DEST_ONLYFANS = "https://onlyfans.com/diana-228/trial/rogleh1l0l1jifh9qs3m6i8lujegxh9x";
+    const DEST_FANSLY   = "https://fans.ly/valentinakusto/t1";
+    const ALLOWED_KEYS = new Set(["src","utm_source","utm_medium","utm_campaign","utm_term","utm_content","ad","profile"]);
+    const inParams = new URLSearchParams(location.search);
+    const fwd = new URLSearchParams();
+    for (const [k,v] of inParams.entries()) { if(ALLOWED_KEYS.has(k)&&v!=="") fwd.append(k,v); }
+    const tid = ()=>"tid="+(Date.now().toString(36)+Math.random().toString(36).slice(2,8));
+    const build = base => base+(base.includes("?")?"&":"?")+tid()+(fwd.toString()?"&"+fwd.toString():"");
+    document.getElementById("btn-onlyfans").onclick=e=>{e.preventDefault();location.href=build(DEST_ONLYFANS);};
+    document.getElementById("btn-fansly").onclick=e=>{e.preventDefault();location.href=build(DEST_FANSLY);};
+  </script>
+</body>
+</html>
