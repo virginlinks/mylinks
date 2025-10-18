@@ -1,93 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Where to next?</title>
-  <meta name="description" content="Pick your poison. Full content inside.">
-  <meta property="og:title" content="Where to next?">
-  <meta property="og:description" content="Pick your poison. Full content inside.">
-  <meta property="og:image" content="hero.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sereda Customs — The Hundred · Made in Bali</title>
+  <meta name="description" content="The Hundred — 100 custom helmets by Andrei Sereda. Made in Bali. Join the legend or order a personal custom." />
+  <meta property="og:title" content="The Hundred — Sereda Customs" />
+  <meta property="og:description" content="100 helmets. 100 souls. Made in Bali. Dynamic pricing that rises with every sale." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="dark light" />
   <style>
-    body {
-      margin: 0;
-      background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+    :root{
+      --bg:#0b0c0f;--card:#12141a;--muted:#9aa3b2;--text:#e8ecf1;--accent:#7cf4c6;--line:#232735;--brand:#e9ff6a;
+      --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
     }
-    header img {
-      width: 100%;
-      max-height: 80vh;
-      object-fit: cover;
-      display: block;
-    }
-    main {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
-    }
-    p {
-      color: #ccc;
-      margin: 0.5rem 0 2rem;
-    }
-    .btn {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #fff;
-      background-color: #e60073;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #ff3385;
-    }
-    .btn.secondary {
-      background-color: #0066cc;
-    }
-    .btn.secondary:hover {
-      background-color: #3399ff;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 var(--font);}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#7cf4c6);display:grid;place-items:center;color:#0b0c0f;font-weight:800}
+    h1{margin:0;font-size:20px;letter-spacing:.2px}
+    .tag{display:inline-flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);padding:8px 10px;border-radius:999px;color:var(--muted)}
+    .lang{display:flex;gap:8px}
+    .btn{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 12px;border-radius:10px}
+    .btn.active{outline:2px solid var(--accent);}
+    .hero{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent),var(--card);border-radius:18px;padding:20px;margin:12px 0 22px}
+    .hero h2{margin:6px 0 10px;font-size:28px}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:840px){.grid{grid-template-columns:1.2fr .8fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .muted{color:var(--muted)}
+    .kpi{display:flex;gap:10px;flex-wrap:wrap}
+    .kpi .pill{background:#0f1116;border:1px solid var(--line);padding:8px 12px;border-radius:999px}
+    table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+    th,td{padding:10px;border-bottom:1px solid var(--line)}
+    th{text-align:left;color:var(--muted);font-weight:600}
+    tbody tr:hover{background:#0f1116}
+    code{background:#0f1116;border:1px solid var(--line);padding:2px 6px;border-radius:6px}
+    .strike{opacity:.6;text-decoration:line-through}
+    .footer{margin:28px 0 10px;color:var(--muted);font-size:13px}
+    .sep{height:1px;background:var(--line);margin:18px 0}
   </style>
 </head>
 <body>
-  <header>
-    <img src="hero.jpg" alt="Hero image">
-  </header>
-  <main>
-    <h1>Where to next?</h1>
-    <p>Pick your poison. Full content inside.</p>
-    <a id="onlyfans" class="btn" href="#">Go to OnlyFans</a>
-    <a id="fansly" class="btn secondary" href="#">Go to Fansly</a>
-  </main>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AS</div>
+        <div>
+          <h1>Sereda Customs — <span data-i="made">Made in Bali</span></h1>
+          <div class="tag">
+            <span>THE HUNDRED</span><span>·</span>
+            <span id="stageTag">000/100</span><span>·</span>
+            <span id="priceTag">$0</span>
+          </div>
+        </div>
+      </div>
+      <div class="lang">
+        <button class="btn active" data-lang="en">EN</button>
+        <button class="btn" data-lang="ru">RU</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2 id="heroTitle">100 helmets. 100 souls.</h2>
+      <p id="heroLead" class="muted">With each sale, the price rises. Choose a commissioned piece — or enter the legend and claim the next number in <strong>The Hundred</strong>. When #100 is complete, the helmet era ends.</p>
+      <div class="kpi" style="margin-top:8px">
+        <div class="pill">Current number: <strong id="kpiNumber">000/100</strong></div>
+        <div class="pill">Current price: <strong id="kpiPrice">$0</strong></div>
+        <div class="pill">Contact: <a href="https://instagram.com/serada_customs" target="_blank" rel="noopener">@serada_customs</a></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h3 id="howTitle">How it works</h3>
+        <ol id="howList">
+          <li><strong>The Hundred:</strong> a limited series of 100 helmets, numbered and signed.</li>
+          <li><strong>Dual path:</strong> (A) Commission — I paint your vision at the current price; (B) Enter the series — your helmet becomes the next number.</li>
+          <li><strong>Rising price:</strong> every sale moves the price to the next tier (see table).</li>
+          <li><strong>Finale:</strong> after #100/100 is sold, I retire from helmets.</li>
+          <li><strong>Authenticity:</strong> each series helmet carries a tiny clear‑coated QR linking to its public provenance page (photos, process video, certificate, owner).</li>
+        </ol>
+        <div class="sep"></div>
+        <h3 id="authTitle">Authenticity & QR</h3>
+        <p id="authText" class="muted">
+          Each series helmet includes: (1) micro‑QR under clear coat → unique page; (2) digital certificate (public repo entry); (3) optional physical card. Non‑series commissions carry my signature only.
+        </p>
+        <p class="muted" id="orderLine">To order: DM <a href="https://instagram.com/serada_customs" target="_blank" rel="noopener">@serada_customs</a>. State: “Commission” or “Join The Hundred”.</p>
+      </section>
+
+      <section class="card">
+        <h3 id="tableTitle">Price ladder (The Hundred)</h3>
+        <p class="muted" id="tableHint">Price rises at each number. Crossed entries are sold. Update the current index below.</p>
+        <div style="display:flex;gap:8px;align-items:center;margin:8px 0 12px">
+          <label for="currentIndex" class="muted" id="idxLabel">Current sold count:</label>
+          <input id="currentIndex" type="number" min="0" max="100" value="2" style="width:90px;background:#0f1116;border:1px solid var(--line);color:var(--text);padding:8px;border-radius:8px"/>
+          <button class="btn" id="applyIdx">Apply</button>
+        </div>
+        <div style="max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:12px">
+          <table id="priceTable" aria-label="Price ladder"></table>
+        </div>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h3 id="contentTitle">Content policy</h3>
+      <ul id="contentList">
+        <li>Feed posts = sold helmets only (photos, brief concept, owner name optional).</li>
+        <li>Reels = process stories (hook → prep → paint → finish → SOLD overlay).</li>
+        <li>Highlights: <em>Story</em>, <em>Sold</em>, <em>Process</em>, <em>Now</em>.</li>
+      </ul>
+    </section>
+
+    <section class="footer">
+      <div>© <span id="year"></span> Sereda Customs · <span data-i="made">Made in Bali</span> · <span>Art that rides.</span></div>
+      <div class="muted"># the hundred. prod. by Andrei Sereda. made in bali.</div>
+    </section>
+  </div>
+
   <script>
-    function getParams() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return ['src','utm_source','utm_medium','utm_campaign','utm_term','utm_content','ad','profile']
-        .map(p => urlParams.get(p) ? `${p}=${encodeURIComponent(urlParams.get(p))}` : '')
-        .filter(Boolean)
-        .join('&');
+    // ====== DATA ======
+    const prices = [
+      // index 0..100 map to 000..100
+      0, 0.01, 0.02, 0.05, 0.10, 0.50, 1, 5, 10, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300,
+      325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600, 625, 650, 675, 700, 725, 750, 775, 800,
+      825, 850, 875, 900, 925, 950, 975, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500,
+      1600, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 3000, 4000, 5000, 6000, 7000,
+      8000, 9000, 10000, 15000, 20000, 25000, 30000, 35000, 50000, 75000, 100000, 125000, 150000, 175000,
+      200000, 250000, 300000, 350000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000
+    ];
+
+    // language packs
+    const i18n = {
+      en: {
+        made: "Made in Bali",
+        heroTitle: "100 helmets. 100 souls.",
+        heroLead: "With each sale, the price rises. Choose a commissioned piece — or enter the legend and claim the next number in The Hundred. When #100 is complete, the helmet era ends.",
+        howTitle: "How it works",
+        howList: [
+          "The Hundred: a limited series of 100 helmets, numbered and signed.",
+          "Dual path: (A) Commission — I paint your vision at the current price; (B) Enter the series — your helmet becomes the next number.",
+          "Rising price: every sale moves the price to the next tier (see table).",
+          "Finale: after #100/100 is sold, I retire from helmets.",
+          "Authenticity: tiny clear‑coated QR linking to a public provenance page (photos, process video, certificate, owner)."
+        ],
+        authTitle: "Authenticity & QR",
+        authText: "Each series helmet includes: (1) micro‑QR under clear coat → unique page; (2) digital certificate (public repo entry); (3) optional physical card. Non‑series commissions carry my signature only.",
+        orderLine: "To order: DM @serada_customs. State: ‘Commission’ or ‘Join The Hundred’.",
+        tableTitle: "Price ladder (The Hundred)",
+        tableHint: "Price rises at each number. Crossed entries are sold. Update the current index below.",
+        idxLabel: "Current sold count:",
+        contentTitle: "Content policy",
+        contentList: [
+          "Feed posts = sold helmets only (photos, brief concept, owner name optional).",
+          "Reels = process stories (hook → prep → paint → finish → SOLD overlay).",
+          "Highlights: Story, Sold, Process, Now."
+        ]
+      },
+      ru: {
+        made: "Сделано на Бали",
+        heroTitle: "100 шлемов. 100 душ.",
+        heroLead: "С каждым проданным шлемом цена растёт. Выбери кастом по заказу — или войди в легенду и забери следующий номер в The Hundred. После №100 эпоха шлемов заканчивается.",
+        howTitle: "Как это работает",
+        howList: [
+          "The Hundred: лимитированная серия из 100 шлемов, пронумерованных и подписанных.",
+          "Два пути: (A) Комиссия — я рисую вашу идею по текущей цене; (B) Серия — ваш шлем становится следующим номером.",
+          "Цена растёт: каждая продажа переводит цену на следующий уровень (см. таблицу).",
+          "Финал: после продажи №100/100 я завершаю карьеру шлемов.",
+          "Аутентичность: мини‑QR под лаком с ссылкой на публичную страницу происхождения (фото, видео процесса, сертификат, владелец)."
+        ],
+        authTitle: "Аутентичность и QR",
+        authText: "Каждый серийный шлем включает: (1) микро‑QR под лаком → уникальная страница; (2) цифровой сертификат (публичный репозиторий); (3) опциональная физическая карточка. Несерийные кастомы имеют только мою подпись.",
+        orderLine: "Заказ: пишите в директ @serada_customs. Укажите: «Комиссия» или «Войти в The Hundred».",
+        tableTitle: "Лестница цен (The Hundred)",
+        tableHint: "Цена растёт на каждом номере. Зачёркнутые позиции — проданы. Обновляйте текущий индекс ниже.",
+        idxLabel: "Продано (шт.):",
+        contentTitle: "Контент‑политика",
+        contentList: [
+          "Посты в ленте = только проданные шлемы (фото, короткая идея, владелец опционально).",
+          "Reels = истории процесса (хук → подготовка → покраска → финиш → SOLD).",
+          "Актуальное: История, Продано, Процесс, Сейчас."
+        ]
+      }
+    };
+
+    // ====== RENDER TABLE ======
+    const tableEl = document.getElementById('priceTable');
+    function fmtUSD(v){
+      return v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
     }
-    function uniqueTid() {
-      return 'tid=' + Date.now() + Math.floor(Math.random()*100000);
+    function renderTable(soldCount){
+      // soldCount = how many are already sold (e.g., 2 means 000 and 001 are sold)
+      tableEl.innerHTML = '';
+      const thead = document.createElement('thead');
+      thead.innerHTML = '<tr><th>#</th><th>Price</th></tr>';
+      tableEl.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      for(let i=0;i<prices.length;i++){
+        const tr = document.createElement('tr');
+        const num = String(i).padStart(3,'0')+"/100";
+        const tdN = document.createElement('td');
+        const tdP = document.createElement('td');
+        tdN.textContent = num;
+        tdP.textContent = fmtUSD(prices[i]);
+        if(i<=soldCount){ tdN.classList.add('strike'); tdP.classList.add('strike'); }
+        tr.appendChild(tdN); tr.appendChild(tdP); tbody.appendChild(tr);
+      }
+      tableEl.appendChild(tbody);
+      // update tags
+      document.getElementById('stageTag').textContent = String(soldCount).padStart(3,'0')+"/100";
+      document.getElementById('priceTag').textContent = fmtUSD(prices[Math.min(soldCount+1,100)]||prices[100]);
+      document.getElementById('kpiNumber').textContent = String(soldCount).padStart(3,'0')+"/100";
+      document.getElementById('kpiPrice').textContent = fmtUSD(prices[Math.min(soldCount+1,100)]||prices[100]);
     }
-    const baseOnlyfans = "https://onlyfans.com/lilyuliaxo/trial/qdg1hktfacayrkk5uzdfhktyicdarzql";
-    const baseFansly = "https://fans.ly/littleyulia/t0";
-    const params = getParams();
-    document.getElementById("onlyfans").href = baseOnlyfans + (params ? "?" + params + "&" + uniqueTid() : "?" + uniqueTid());
-    document.getElementById("fansly").href = baseFansly + (params ? "?" + params + "&" + uniqueTid() : "?" + uniqueTid());
+
+    // ====== LANGUAGE SWITCH ======
+    const langBtns = document.querySelectorAll('.btn[data-lang]');
+    function setLang(lang){
+      langBtns.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+      const t = i18n[lang];
+      document.querySelectorAll('[data-i="made"]').forEach(el=>el.textContent = t.made);
+      document.getElementById('heroTitle').textContent = t.heroTitle;
+      document.getElementById('heroLead').textContent = t.heroLead;
+      document.getElementById('howTitle').textContent = t.howTitle;
+      const ul = document.getElementById('howList'); ul.innerHTML = '';
+      t.howList.forEach(li=>{ const el=document.createElement('li'); el.innerHTML = li; ul.appendChild(el); });
+      document.getElementById('authTitle').textContent = t.authTitle;
+      document.getElementById('authText').textContent = t.authText;
+      document.getElementById('orderLine').textContent = t.orderLine;
+      document.getElementById('tableTitle').textContent = t.tableTitle;
+      document.getElementById('tableHint').textContent = t.tableHint;
+      document.getElementById('idxLabel').textContent = t.idxLabel;
+      document.getElementById('contentTitle').textContent = t.contentTitle;
+      const cl = document.getElementById('contentList'); cl.innerHTML='';
+      t.contentList.forEach(li=>{ const el=document.createElement('li'); el.textContent = li; cl.appendChild(el); });
+      // table header localization
+      tableEl.querySelector('thead')?.querySelectorAll('th')?.forEach((th,i)=>{
+        if(lang==='ru'){ th.textContent = i===0 ? '# (номер)' : 'Цена'; }
+        else { th.textContent = i===0 ? '#' : 'Price'; }
+      });
+    }
+
+    // ====== INIT ======
+    const idxInput = document.getElementById('currentIndex');
+    document.getElementById('applyIdx').addEventListener('click', ()=>{
+      let n = parseInt(idxInput.value,10);
+      if(isNaN(n)||n<0) n=0; if(n>100) n=100; renderTable(n);
+    });
+    langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderTable(parseInt(idxInput.value,10));
+    setLang('en');
   </script>
 </body>
 </html>
