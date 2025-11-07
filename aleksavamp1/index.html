@@ -1,119 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aleksa Vamp — links hub</title>
-  <meta name="description" content="Pick where to go next: OnlyFans or Fansly. Full content inside. Aleksa Vamp official." />
-  <meta property="og:title" content="Aleksa Vamp — links hub" />
-  <meta property="og:description" content="Pick where to go next: OnlyFans or Fansly. Full content inside." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="hero.jpg" />
-  <style>
-    :root{
-      --bg:#0b0b0f;
-      --card:#14141a;
-      --text:#f5f7fb;
-      --muted:#b8bdd1;
-      --accent:#ff3b88;
-      --accent-2:#7dd3fc;
-      --ring: rgba(255,255,255,.12);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: radial-gradient(60% 60% at 50% 0%, #17171f 0%, #0b0b0f 60%);
-      color:var(--text);
-      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, "Apple Color Emoji","Segoe UI Emoji";
-      display:flex; align-items:center; justify-content:center; padding:24px;
-    }
-    .card{
-      width:min(740px, 100%);
-      background:var(--card);
-      border:1px solid var(--ring);
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    }
-    .hero{
-      position:relative;
-      width:100%; aspect-ratio: 16/9; background:#000; overflow:hidden;
-    }
-    .hero img{
-      width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05);
-    }
-    .overlay{
-      position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);
-    }
-    .content{ padding:28px 22px 26px 22px; }
-    h1{ margin:0 0 6px; font-size:28px; letter-spacing:.3px;}
-    p.sub{ margin:0 0 18px; color:var(--muted) }
-    .btns{ display:grid; grid-template-columns:1fr; gap:12px; }
-    a.btn{
-      display:flex; align-items:center; justify-content:center;
-      text-decoration:none; color:#fff; font-weight:700; letter-spacing:.2px;
-      padding:14px 18px; border-radius:14px; border:1px solid var(--ring);
-      outline:none; transition: transform .06s ease, box-shadow .06s ease;
-      box-shadow:0 6px 18px rgba(0,0,0,.35);
-      text-align:center; word-break:break-word;
-    }
-    a.btn:focus{ box-shadow:0 0 0 4px rgba(255,255,255,.08); }
-    a.primary{ background:linear-gradient(180deg, #ff4d8d, #e92f77); }
-    a.secondary{ background:linear-gradient(180deg, #60a5fa, #3b82f6); }
-    a.btn:hover{ transform: translateY(-1px); }
-    footer{ padding:10px 22px 22px; color:var(--muted); font-size:12px; text-align:center;}
-    .logo{ font-weight:700; color:#fff; opacity:.9; }
-    @media (min-width: 560px){
-      .content{ padding:30px 28px 24px 28px; }
-      h1{ font-size:32px }
-      .btns{ grid-template-columns:1fr 1fr; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Virgin Agency — Cases & Contacts</title>
+<meta name="description" content="Virgin Agency — producers with 4+ years on the market. We build a real business around your image: 40% net profit to the model, 24/7 support, traffic scaling, content plan, confidentiality, and real $15k–30k/month cases." />
+<meta property="og:title" content="Virgin Agency — Cases & Contacts" />
+<meta property="og:description" content="Producers with 4+ years on the market. 40% net for models, 24/7 support, traffic scaling, content plan, confidentiality, and real $15k–30k/month cases." />
+<meta property="og:image" content="photo_2025-11-07%2018.02.24.jpeg" />
+<meta name="color-scheme" content="dark light" />
+<style>
+  :root{
+    --bg:#0b0c10; --card:#12151b; --muted:#8a93a4; --text:#e8ecf8;
+    --accent:#6ee7ff; --accent2:#a78bfa; --ok:#22c55e;
+    --button:#1f2937; --buttonText:#e8ecf8; --buttonHover:#2b3649;
+    --border:rgba(255,255,255,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue","Noto Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.55}
+  a{color:var(--accent)}
+  header{
+    display:grid; place-items:center; padding:28px 16px 0
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:24px 16px 64px}
+  .hero{
+    border-radius:22px; overflow:hidden; border:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)) , var(--card)
+  }
+  .hero img{width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:16/7}
+  .titleBox{padding:22px 20px 26px}
+  h1{font-size:clamp(28px,3.2vw,42px);margin:0 0 6px}
+  .lead{color:var(--muted);font-size:clamp(14px,1.6vw,18px)}
+  .lang{
+    display:flex; gap:8px; margin:14px 0 0; flex-wrap:wrap
+  }
+  .lang button{
+    background:var(--button); color:var(--buttonText); border:1px solid var(--border);
+    padding:8px 12px; border-radius:999px; cursor:pointer; font-weight:600
+  }
+  .lang button[aria-pressed="true"]{outline:2px solid var(--accent); background:linear-gradient(90deg, rgba(110,231,255,.1), rgba(167,139,250,.1))}
+  section.card{
+    background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px; margin:18px 0
+  }
+  h2{font-size:clamp(22px,2.5vw,30px); margin:0 0 12px}
+  h3{font-size:clamp(18px,2vw,22px); margin:18px 0 8px}
+  .grid-2{display:grid; grid-template-columns:1fr; gap:14px}
+  .check li{margin:8px 0}
+  .check li::marker{color:var(--ok)}
+  @media(min-width:860px){
+    .grid-2{grid-template-columns:1.15fr .85fr}
+  }
+
+  /* Gallery */
+  .galleryHead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+  .tagline{color:var(--muted)}
+  .grid{
+    display:grid; gap:10px; grid-template-columns:repeat(2,1fr)
+  }
+  @media(min-width:720px){ .grid{grid-template-columns:repeat(3,1fr)} }
+  .tile{position:relative; border-radius:14px; overflow:hidden; border:1px solid var(--border); background:#0e1117}
+  .tile img{width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:4/3}
+  .badge{
+    position:absolute; left:10px; top:10px; background:rgba(0,0,0,.55);
+    color:#b4f5ff; padding:6px 10px; font-weight:700; border-radius:999px; backdrop-filter:blur(6px); border:1px solid var(--border)
+  }
+
+  /* Lightbox */
+  .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:60; padding:20px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(1200px,95vw); max-height:85vh; border-radius:14px; border:1px solid var(--border)}
+  .lightbox .close{position:absolute; top:16px; right:16px; background:var(--button); border:1px solid var(--border); color:var(--buttonText); padding:8px 12px; border-radius:10px; cursor:pointer}
+
+  .cta{
+    display:flex; flex-wrap:wrap; gap:10px; margin-top:12px
+  }
+  .btn{
+    background:linear-gradient(90deg, rgba(110,231,255,.16), rgba(167,139,250,.16));
+    border:1px solid var(--border); color:var(--text); padding:12px 16px; border-radius:12px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:10px
+  }
+  .btn:hover{filter:brightness(1.05)}
+  .muted{color:var(--muted)}
+  footer{color:var(--muted); text-align:center; padding-top:24px}
+  .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,"Liberation Mono","Courier New",monospace}
+</style>
 </head>
 <body>
-  <main class="card" role="main">
-    <div class="hero">
-      <img src="hero.jpg" alt="Aleksa's cover photo" />
-      <div class="overlay" aria-hidden="true"></div>
-    </div>
-    <div class="content">
-      <h1>Where to next?</h1>
-      <p class="sub">Pick your poison. Full content inside.</p>
-      <div class="btns" role="navigation" aria-label="Primary">
-        <a id="btn-onlyfans" class="btn primary" href="#" rel="nofollow">Go to OnlyFans</a>
-        <a id="btn-fansly" class="btn secondary" href="#" rel="nofollow">Go to Fansly</a>
+
+<header>
+  <div class="hero" aria-label="Virgin Agency cover">
+    <img src="photo_2025-11-07%2018.02.27.jpeg" alt="Virgin Agency — growth cases and media views" />
+    <div class="titleBox">
+      <h1 data-i18n="h.title">Virgin Agency — Where models grow</h1>
+      <p class="lead" data-i18n="h.subtitle">Freedom begins where you control your body, your time, and your income.</p>
+      <div class="lang" role="group" aria-label="Language switch">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="es">ES</button>
       </div>
     </div>
-    <footer>
-      <span class="logo">virginlinks</span> · © <span id="y"></span>
-    </footer>
-  </main>
-  <script>
-    (function(){
-      const of = "https://onlyfans.com/aleksa_vamp/trial/epi6zgo1oqlfi689mhjoukahzytltzrk";
-      const fl = "https://fans.ly/AleksaVamp/t18";
-      const allowed = ["src","utm_source","utm_medium","utm_campaign","utm_term","utm_content","ad","profile"];
-      const params = new URLSearchParams(window.location.search);
-      const out = new URLSearchParams();
-      for (const k of allowed){
-        if (params.has(k)){
-          out.set(k, params.get(k));
-        }
-      }
-      function tid(){ return Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,8); }
-      function withParams(u){
-        const url = new URL(u);
-        for (const [k,v] of out.entries()){ url.searchParams.set(k,v); }
-        url.searchParams.set("tid", tid());
-        return url.toString();
-      }
-      const o = document.getElementById("btn-onlyfans");
-      const f = document.getElementById("btn-fansly");
-      o.setAttribute("href", withParams(of));
-      f.setAttribute("href", withParams(fl));
-      document.getElementById("y").textContent = new Date().getFullYear();
-    })();
-  </script>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card">
+    <div class="grid-2">
+      <div>
+        <h2 data-i18n="about.title">Short about us</h2>
+        <p data-i18n="about.p1">We are <b>Virgin Agency</b> — a team of producers with <b>4+ years</b> on the market.</p>
+        <p data-i18n="about.p2">We don’t just “run an account” — we <b>build a system business</b>. We are partners, not exploiters.</p>
+      </div>
+      <div>
+        <h3 data-i18n="why.title">Why it works</h3>
+        <ul class="check">
+          <li data-i18n="why.li1">Real cases from zero to $15k–$30k/month.</li>
+          <li data-i18n="why.li2">We build a business around your image, not just sell content.</li>
+          <li data-i18n="why.li3">Automated processes with a human touch.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-i18n="benefits.title">What you get working with us</h2>
+
+    <h3>1. <span data-i18n="b1.title">40% of all net profit</span></h3>
+    <p data-i18n="b1.p">That’s twice the market average. We never underpay and we invest to increase total revenue. We cover all promo and team costs. Payouts weekly on Mondays.</p>
+
+    <h3>2. <span data-i18n="b2.title">Personal support 24/7</span></h3>
+    <p data-i18n="b2.p">You’re never alone: our support team is always in touch — from emergencies to moral support, we react fast and step in immediately.</p>
+
+    <h3>3. <span data-i18n="b3.title">Content plan & individual strategy</span></h3>
+    <p data-i18n="b3.p">A plan tailored to your lifestyle, character, taboos and features. No generic templates — only a personalized approach based on analytics and experience.</p>
+
+    <h3>4. <span data-i18n="b4.title">Traffic launch & scaling</span></h3>
+    <p data-i18n="b4.p">We configure external channels: Reddit, Twitter, TikTok, YouTube, ShareSom, xFree, xStick, xFlow, Pornhub, etc. Organic, warming, viral traffic and internal databases.</p>
+
+    <h3>5. <span data-i18n="b5.title">Page operations 24/7</span></h3>
+    <p data-i18n="b5.p">Communication, segmentation, upsell, reactivation and engagement. Daily, no weekends.</p>
+
+    <h3>6. <span data-i18n="b6.title">Full control & confidentiality</span></h3>
+    <p data-i18n="b6.p">We don’t touch your personal data without consent. Anonymous work, strict boundaries. You keep platform access.</p>
+
+    <h3>7. <span data-i18n="b7.title">Work with your existing socials</span></h3>
+    <p data-i18n="b7.p">If you already have an audience, we amplify it: adjust bio link, warming, funnel — no spam or annoying blasts.</p>
+
+    <h3>8. <span data-i18n="b8.title">Content quality control</span></h3>
+    <p data-i18n="b8.p">Help with shooting, editing, ideas, references, formats. We explain which scenes and looks work — and why. Examples + a working style.</p>
+
+    <h3>9. <span data-i18n="b9.title">Fair system without penalties</span></h3>
+    <p data-i18n="b9.p">No fine print, no holds, no hidden tricks. Built on trust and transparency.</p>
+  </section>
+
+  <section class="card">
+    <div class="galleryHead">
+      <div>
+        <h2 data-i18n="cases.title">Current cases</h2>
+        <p class="tagline" data-i18n="cases.tag">Big balances aren’t a dream — they’re reality.</p>
+      </div>
+      <a class="btn" href="https://t.me/virgin_agency" target="_blank" rel="noopener" data-i18n="cases.btn">See more @ Virgin Agency</a>
+    </div>
+
+    <div class="grid" id="gallery" aria-label="Gallery of revenue proofs and analytics">
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.24.jpeg" alt="Media Views chart"><figcaption class="badge">Analytics</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.27.jpeg" alt="Fansly monthly results"><figcaption class="badge">$14,982</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.29.jpeg" alt="Top 500 badge"><figcaption class="badge">Top 500</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.44.jpeg" alt="Monthly revenue list #1"><figcaption class="badge">Growth</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.50.jpeg" alt="Monthly revenue list #2"><figcaption class="badge">Consistency</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.02.56.jpeg" alt="Monthly revenue list #3"><figcaption class="badge">$11,606</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.03.00.jpeg" alt="Monthly revenue list #4"><figcaption class="badge">$16,926</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.03.04.jpeg" alt="Fansly badges Nov–Dec"><figcaption class="badge">Badges</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.03.11.jpeg" alt="Monthly revenue list #5"><figcaption class="badge">$12,916</figcaption></figure>
+      <figure class="tile"><img src="photo_2025-11-07%2018.03.14.jpeg" alt="Monthly revenue list #6"><figcaption class="badge">$5–7k</figcaption></figure>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Expanded image viewer">
+      <button class="close" id="lbClose" aria-label="Close">✕</button>
+      <img id="lbImg" alt="" />
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-i18n="contact.title">Contacts</h2>
+    <div class="cta">
+      <a class="btn" href="https://t.me/virgin_agency" target="_blank" rel="noopener">Telegram: <span class="mono">@virgin_agency</span></a>
+      <a class="btn" href="https://t.me/FreedomWithVirgin" target="_blank" rel="noopener"><span class="mono">@FreedomWithVirgin</span> — <span data-i18n="contact.models">models DM here</span></a>
+      <a class="btn" href="mailto:kdjfkdjkffjsk@icloud.com?subject=Virgin%20Agency%20—%20Application&body=Tell%20us%20your%20contact%20(Telegram)%2C%20timezone%2C%20and%20a%20few%20words%20about%20you." rel="noopener">Email: <span class="mono">kdjfkdjkffjsk@icloud.com</span></a>
+    </div>
+    <p class="muted" data-i18n="contact.note">You can apply by email and also message us on Telegram. If you write by email, please add your Telegram handle for faster contact.</p>
+  </section>
+
+  <section class="card">
+    <h2 data-i18n="cta.title">If this is you</h2>
+    <ul>
+      <li data-i18n="cta.li1">Tired of chaos, lies and being alone in it.</li>
+      <li data-i18n="cta.li2">Want stability, a professional team and growth.</li>
+      <li data-i18n="cta.li3">Ready to work — but don’t want to do it alone.</li>
+    </ul>
+    <p data-i18n="cta.end">Write to us. We’ll show how it works and make the first step together.</p>
+    <p><b>Virgin Agency</b> — <span data-i18n="cta.bottom">a team you can grow with.</span></p>
+  </section>
+
+  <footer>
+    <p class="muted">© <span id="y"></span> Virgin Agency</p>
+  </footer>
+</main>
+
+<script>
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  document.getElementById('gallery').addEventListener('click', e=>{
+    const img = e.target.closest('img'); if(!img) return;
+    lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('open');
+  });
+  lbClose.addEventListener('click',()=>lb.classList.remove('open'));
+  lb.addEventListener('click',e=>{ if(e.target===lb) lb.classList.remove('open'); });
+
+  // i18n dictionary
+  const i18n = {
+    en:{
+      "h.title":"Virgin Agency — Where models grow",
+      "h.subtitle":"Freedom begins where you control your body, your time, and your income.",
+      "about.title":"Short about us",
+      "about.p1":"We are <b>Virgin Agency</b> — a team of producers with <b>4+ years</b> on the market.",
+      "about.p2":"We don’t just “run an account” — we <b>build a system business</b>. We are partners, not exploiters.",
+      "why.title":"Why us",
+      "why.li1":"Real cases from zero to $15k–$30k/month.",
+      "why.li2":"We build a business around your image, not just sell content.",
+      "why.li3":"Automated processes with a human touch.",
+      "benefits.title":"What you get working with us",
+      "b1.title":"40% of all net profit",
+      "b1.p":"That’s twice the market average. We never underpay and we invest to increase total revenue. We cover all promo and team costs. Payouts weekly on Mondays.",
+      "b2.title":"Personal support 24/7",
+      "b2.p":"You’re never alone: our support team is always in touch — from emergencies to moral support, we react fast and step in immediately.",
+      "b3.title":"Content plan & individual strategy",
+      "b3.p":"A plan tailored to your lifestyle, character, taboos and features. No generic templates — only a personalized approach based on analytics and experience.",
+      "b4.title":"Traffic launch & scaling",
+      "b4.p":"We configure external channels: Reddit, Twitter, TikTok, YouTube, ShareSom, xFree, xStick, xFlow, Pornhub, etc. Organic, warming, viral traffic and internal databases.",
+      "b5.title":"Page operations 24/7",
+      "b5.p":"Communication, segmentation, upsell, reactivation and engagement. Daily, no weekends.",
+      "b6.title":"Full control & confidentiality",
+      "b6.p":"We don’t touch your personal data without consent. Anonymous work, strict boundaries. You keep platform access.",
+      "b7.title":"Work with your existing socials",
+      "b7.p":"If you already have an audience, we amplify it: adjust bio link, warming, funnel — no spam or annoying blasts.",
+      "b8.title":"Content quality control",
+      "b8.p":"Help with shooting, editing, ideas, references, formats. We explain which scenes and looks work — and why. Examples + a working style.",
+      "b9.title":"Fair system without penalties",
+      "b9.p":"No fine print, no holds, no hidden tricks. Built on trust and transparency.",
+      "cases.title":"Current cases",
+      "cases.tag":"Big balances aren’t a dream — they’re reality.",
+      "cases.btn":"See more @ Virgin Agency",
+      "contact.title":"Contacts",
+      "contact.models":"models DM here",
+      "contact.note":"You can apply by email and also message us on Telegram. If you write by email, please add your Telegram handle for faster contact.",
+      "cta.title":"If this is you",
+      "cta.li1":"Tired of chaos, lies and being alone in it.",
+      "cta.li2":"Want stability, a professional team and growth.",
+      "cta.li3":"Ready to work — but don’t want to do it alone.",
+      "cta.end":"Write to us. We’ll show how it works and make the first step together.",
+      "cta.bottom":"a team you can grow with."
+    },
+    ru:{
+      "h.title":"Virgin Agency — там, где модели растут",
+      "h.subtitle":"Свобода начинается там, где ты управляешь своим телом, временем и доходом.",
+      "about.title":"Коротко о нас",
+      "about.p1":"Мы — <b>Virgin Agency</b>, команда продюсеров, более <b>4 лет</b> на рынке.",
+      "about.p2":"Мы не просто «ведём аккаунт» — мы <b>строим системный бизнес</b>. Мы партнёры, а не эксплуататоры.",
+      "why.title":"Почему мы",
+      "why.li1":"Реальные кейсы с нуля до $15k–$30k в месяц.",
+      "why.li2":"Мы строим бизнес вокруг твоего образа, а не просто «продаём контент».",
+      "why.li3":"Автоматизация процессов и человеческое отношение.",
+      "benefits.title":"Что ты получаешь, работая с нами",
+      "b1.title":"40% от всей чистой прибыли",
+      "b1.p":"Это вдвое выше среднего по рынку. Мы не занижаем выплаты и вкладываемся, чтобы расти общий доход. Все расходы на промо и команду — на нас. Выплаты раз в неделю, по понедельникам.",
+      "b2.title":"Персональное сопровождение 24/7",
+      "b2.p":"Ты не остаёшься одна: поддержка всегда на связи — от экстренных случаев до моральной поддержки. Реагируем быстро, включаемся сразу.",
+      "b3.title":"Контент-план и индивидуальная стратегия",
+      "b3.p":"План под твой ритм жизни, характер, табу и особенности. Никаких чужих шаблонов — только персональный подход на аналитике и опыте.",
+      "b4.title":"Запуск и масштабирование трафика",
+      "b4.p":"Внешние каналы: Reddit, Twitter, TikTok, YouTube, ShareSom, xFree, xStick, xFlow, Pornhub и др. Включаем органику, прогрев, виральность и внутренние базы.",
+      "b5.title":"Обработка страницы 24/7",
+      "b5.p":"Коммуникация, сегментация, апселлы, реактивация и вовлечение — ежедневно, без выходных.",
+      "b6.title":"Полный контроль и конфиденциальность",
+      "b6.p":"Мы не трогаем личные данные без согласия. Анонимно и с соблюдением границ. Доступ к платформам остаётся у тебя.",
+      "b7.title":"Работа с текущими сетями",
+      "b7.p":"Если у тебя уже есть аудитория — усилим её: линк, прогрев, воронка. Без спама и раздражающих рассылок.",
+      "b8.title":"Контроль качества контента",
+      "b8.p":"Помогаем со съёмкой, монтажом, идеями, рефами и форматами. Объясняем, что работает и почему. Показываем примеры и выстраиваем стиль.",
+      "b9.title":"Честная система без штрафов",
+      "b9.p":"Без мелкого шрифта, удержаний и скрытых условий. Всё на доверии и прозрачности.",
+      "cases.title":"Актуальные кейсы",
+      "cases.tag":"Большие балансы — не мечта, а реальность.",
+      "cases.btn":"Ещё кейсы — в Telegram",
+      "contact.title":"Контакты",
+      "contact.models":"моделям писать сюда",
+      "contact.note":"Можно подать заявку по почте и написать в Telegram. Если пишете на почту — обязательно укажите контакт для связи (Telegram).",
+      "cta.title":"Если это про тебя",
+      "cta.li1":"Устала от непонимания, суеты и обмана.",
+      "cta.li2":"Хочешь стабильности, профессиональной команды и роста.",
+      "cta.li3":"Готова работать, но не хочешь делать всё одна.",
+      "cta.end":"Напиши нам. Покажем, как это работает, и сделаем первый шаг вместе.",
+      "cta.bottom":"команда, с которой можно расти."
+    },
+    es:{
+      "h.title":"Virgin Agency — donde las modelos crecen",
+      "h.subtitle":"La libertad empieza donde controlas tu cuerpo, tu tiempo y tus ingresos.",
+      "about.title":"Breve sobre nosotros",
+      "about.p1":"Somos <b>Virgin Agency</b>, un equipo de productores con <b>más de 4 años</b> en el mercado.",
+      "about.p2":"No solo “llevamos una cuenta”; <b>construimos un negocio sistemático</b>. Somos socios, no explotadores.",
+      "why.title":"Por qué nosotros",
+      "why.li1":"Casos reales desde cero hasta $15k–$30k/mes.",
+      "why.li2":"Construimos un negocio alrededor de tu imagen, no solo vendemos contenido.",
+      "why.li3":"Procesos automatizados con trato humano.",
+      "benefits.title":"Qué recibes al trabajar con nosotros",
+      "b1.title":"40% de toda la ganancia neta",
+      "b1.p":"El doble del promedio del mercado. No reducimos pagos y además invertimos para aumentar los ingresos totales. Cubrimos promoción y equipo. Pagos semanales los lunes.",
+      "b2.title":"Acompañamiento personal 24/7",
+      "b2.p":"Nunca estás sola: soporte siempre disponible. De urgencias a apoyo moral — reaccionamos rápido y nos involucramos de inmediato.",
+      "b3.title":"Plan de contenido y estrategia individual",
+      "b3.p":"Plan según tu ritmo de vida, carácter, tabúes y particularidades. Nada de plantillas ajenas — solo enfoque personal con analítica y experiencia.",
+      "b4.title":"Lanzamiento y escalado de tráfico",
+      "b4.p":"Canales externos: Reddit, Twitter, TikTok, YouTube, ShareSom, xFree, xStick, xFlow, Pornhub, etc. Orgánico, calentamiento, tráfico viral y bases internas.",
+      "b5.title":"Operación de la página 24/7",
+      "b5.p":"Comunicación, segmentación, upsell, reactivación e interacción — diario, sin descanso.",
+      "b6.title":"Control total y confidencialidad",
+      "b6.p":"No tocamos tus datos sin consentimiento. Trabajo anónimo y con límites claros. Mantienes el acceso a las plataformas.",
+      "b7.title":"Trabajo con tus redes actuales",
+      "b7.p":"Si ya tienes audiencia, la potenciamos: link, calentamiento, embudo — sin spam.",
+      "b8.title":"Control de calidad del contenido",
+      "b8.p":"Ayuda con rodaje, edición, ideas, referencias y formatos. Explicamos qué funciona y por qué. Ejemplos + estilo de trabajo.",
+      "b9.title":"Sistema justo sin multas",
+      "b9.p":"Sin letra pequeña, retenciones ni condiciones ocultas. Todo basado en confianza y transparencia.",
+      "cases.title":"Casos actuales",
+      "cases.tag":"Los grandes balances no son un sueño — son realidad.",
+      "cases.btn":"Ver más en Telegram",
+      "contact.title":"Contactos",
+      "contact.models":"mensajes de modelos aquí",
+      "contact.note":"Puedes aplicar por email y también escribirnos por Telegram. Si escribes por email, añade tu usuario de Telegram para contacto rápido.",
+      "cta.title":"Si te identificas",
+      "cta.li1":"Cansada de la confusión, mentiras y hacerlo sola.",
+      "cta.li2":"Quieres estabilidad, equipo profesional y crecimiento.",
+      "cta.li3":"Lista para trabajar, pero no sola.",
+      "cta.end":"Escríbenos. Te mostraremos cómo funciona y daremos el primer paso juntas.",
+      "cta.bottom":"un equipo con el que crecer."
+    }
+  };
+
+  const els = document.querySelectorAll('[data-i18n]');
+  function setLang(code){
+    const dict = i18n[code] || i18n.en;
+    els.forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key]!==undefined){ el.innerHTML = dict[key]; }
+    });
+    document.documentElement.lang = code;
+    document.querySelectorAll('.lang button').forEach(b=>{
+      b.setAttribute('aria-pressed', b.dataset.lang===code ? 'true':'false');
+    });
+    localStorage.setItem('va_lang', code);
+  }
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.addEventListener('click', ()=>setLang(b.dataset.lang));
+  });
+  setLang(localStorage.getItem('va_lang') || 'en');
+
+  // Year
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
